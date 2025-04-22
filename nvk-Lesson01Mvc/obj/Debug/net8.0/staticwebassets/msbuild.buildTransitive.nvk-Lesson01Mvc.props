@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\nvk-Lesson01Mvc.props" />
+</Project>
