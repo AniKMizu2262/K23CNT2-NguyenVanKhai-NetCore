@@ -1,0 +1,37 @@
+﻿@model IEnumerable<NvkLesson04.Models.NvkBook>
+
+@{
+    ViewData["Title"] = "List Book";
+}
+
+<h1>Thông tin sách </h1>
+<table class=" table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên sách</th>
+            <th>Mô tả</th>
+            <th>Ảnh minh họa</th>
+            <th>Giá</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(NvkBook nvkItem in Model)
+        {
+            <tr>
+                <td>@nvkItem.NvkId</td>
+                <td>@nvkItem.NvkTitle</td>
+                <td>@nvkItem.NvkDescription</td>
+                <td>
+                    <img src="@nvkItem.NvkImage" alt="@nvkItem.NvkTitle" style="width:100px; height:150px;" />
+
+                    </td>
+                <td>@nvkItem.NvkPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-action="NvkCreate" asp-controller="NvkBooks" class="btn btn-success">Thêm Sách Mới</a>
+
+
+

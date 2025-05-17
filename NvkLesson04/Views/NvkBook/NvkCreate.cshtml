@@ -1,0 +1,48 @@
+﻿@model NvkLesson04.Models.NvkBook
+
+@{
+    ViewData["Title"] = "Thêm Sách Mới";
+}
+
+<h2>Thêm Sách Mới</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="NvkId"></label>
+        <input asp-for="NvkId" class="form-control" />
+        <span asp-validation-for="NvkId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NvkTitle"></label>
+        <input asp-for="NvkTitle" class="form-control" />
+        <span asp-validation-for="NvkTitle" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NvkDescription"></label>
+        <textarea asp-for="NvkDescription" class="form-control"></textarea>
+        <span asp-validation-for="NvkDescription" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NvkImage"></label>
+        <input asp-for="NvkImage" class="form-control" />
+        <span asp-validation-for="NvkImage" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NvkPrice"></label>
+        <input asp-for="NvkPrice" class="form-control" type="number" step="0.01" />
+        <span asp-validation-for="NvkPrice" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="NvkPage"></label>
+        <input asp-for="NvkPage" class="form-control" type="number" />
+        <span asp-validation-for="NvkPage" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Thêm Sách</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

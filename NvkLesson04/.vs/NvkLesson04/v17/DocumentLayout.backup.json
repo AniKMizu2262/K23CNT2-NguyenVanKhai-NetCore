@@ -1,0 +1,140 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\views\\nvkbook\\nvkcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:views\\nvkbook\\nvkcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\models\\nvkbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:models\\nvkbook.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\controllers\\nvkhomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:controllers\\nvkhomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\controllers\\nvkbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:controllers\\nvkbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\views\\shared\\_nvklayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:views\\shared\\_nvklayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklesson04\\views\\nvkbook\\nvkindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{084A6B3B-2AF2-4419-9A0C-C655DB16BC23}|NvkLesson04.csproj|solutionrelative:views\\nvkbook\\nvkindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NvkIndex.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\NvkBook\\NvkIndex.cshtml",
+              "RelativeDocumentMoniker": "Views\\NvkBook\\NvkIndex.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\NvkBook\\NvkIndex.cshtml",
+              "RelativeToolTip": "Views\\NvkBook\\NvkIndex.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:11:27.549Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_NvkLayout.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\Shared\\_NvkLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_NvkLayout.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\Shared\\_NvkLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_NvkLayout.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:51:08.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NvkCreate.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\NvkBook\\NvkCreate.cshtml",
+              "RelativeDocumentMoniker": "Views\\NvkBook\\NvkCreate.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\NvkBook\\NvkCreate.cshtml",
+              "RelativeToolTip": "Views\\NvkBook\\NvkCreate.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:36:52.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Header.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\Shared\\_Header.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Header.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Views\\Shared\\_Header.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Header.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBIAAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-17T16:28:39.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NvkBookController.cs",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Controllers\\NvkBookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NvkBookController.cs",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Controllers\\NvkBookController.cs",
+              "RelativeToolTip": "Controllers\\NvkBookController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAE8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T17:05:44.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NvkHomeController.cs",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Controllers\\NvkHomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NvkHomeController.cs",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Controllers\\NvkHomeController.cs",
+              "RelativeToolTip": "Controllers\\NvkHomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T17:05:11.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NvkBook.cs",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Models\\NvkBook.cs",
+              "RelativeDocumentMoniker": "Models\\NvkBook.cs",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLesson04\\Models\\NvkBook.cs",
+              "RelativeToolTip": "Models\\NvkBook.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T17:00:17.695Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
