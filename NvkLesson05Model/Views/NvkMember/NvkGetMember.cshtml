@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewData["Title"] = "Member Info";
+    var nvkMember = ViewBag.nvkMember as NvkLesson05Model.Models.DataModels.NvkMember;
+}
+
+<div class="alert alert-danger">
+    <h1>Member Info</h1>
+    <hr />
+    <p>Member ID : @nvkMember.NvkMemberID</p>
+    <p>Username : @nvkMember.NvkUserName </p>
+    <p>FullName : @nvkMember.NvkFullName</p>
+    <p>Password : @nvkMember.NvkPassword</p>
+    <p>Email : @nvkMember.NvkEmail</p>
+</div>
+
+ 
