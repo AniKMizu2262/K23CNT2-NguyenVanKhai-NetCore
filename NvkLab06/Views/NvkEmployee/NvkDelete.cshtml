@@ -1,0 +1,28 @@
+﻿@model NvkLab06.Models.NvkEmployee
+
+@{
+    ViewData["Title"] = "Xóa nhân viên";
+}
+
+<h2>Bạn có chắc muốn xóa nhân viên này?</h2>
+
+<div>
+    <h4>@Model.NvkName (@Model.NvkId)</h4>
+    <dl class="row">
+        <dt class="col-sm-3">Ngày sinh</dt>
+        <dd class="col-sm-9">@Model.NvkBirthDay.ToString("dd/MM/yyyy")</dd>
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.NvkEmail</dd>
+        <dt class="col-sm-3">Điện thoại</dt>
+        <dd class="col-sm-9">@Model.NvkPhone</dd>
+        <dt class="col-sm-3">Lương</dt>
+        <dd class="col-sm-9">@Model.NvkSalary.ToString("N0")</dd>
+        <dt class="col-sm-3">Trạng thái</dt>
+        <dd class="col-sm-9">@((Model.NvkStatus) ? "Hoạt động" : "Không hoạt động")</dd>
+    </dl>
+    <form asp-action="NvkDelete" method="post">
+        <input type="hidden" asp-for="NvkId" />
+        <button type="submit" class="btn btn-danger">Xóa</button>
+        <a asp-action="NvkIndex" class="btn btn-secondary">Quay lại</a>
+    </form>
+</div>

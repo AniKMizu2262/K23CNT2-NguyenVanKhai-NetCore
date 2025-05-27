@@ -8,7 +8,7 @@
 <div class="container mt-4 d-flex justify-content-center">
     <div style="width: 90%;">
         <h2 class="mb-4 text-center text-primary">Danh sách nhân viên</h2>
-        <a href="/NvkEmployee/NvkCreate" class="btn btn-primary">Thêm mới </a>
+        <a href="/NvkEmployee/NvkCreate" class="btn btn-primary mb-2">Thêm mới</a>
 
         <table class="table table-bordered table-hover text-center">
             <thead class="table-dark">
@@ -20,6 +20,7 @@
                     <th>Điện thoại</th>
                     <th>Lương</th>
                     <th>Trạng thái</th>
+                    <th>Thao tác</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,13 +45,17 @@
                                     <span class="badge bg-secondary">Đã nghỉ</span>
                                 }
                             </td>
+                            <td>
+                                <a href="/NvkEmployee/NvkEdit/@nvkEmp.NvkId" class="btn btn-warning btn-sm">Sửa</a>
+                                <a href="/NvkEmployee/NvkDelete/@nvkEmp.NvkId" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn xóa?');">Xóa</a>
+                            </td>
                         </tr>
                     }
                 }
                 else
                 {
                     <tr>
-                        <td colspan="7" class="text-center text-danger">Không có dữ liệu nhân viên</td>
+                        <td colspan="8" class="text-center text-danger">Không có dữ liệu nhân viên</td>
                     </tr>
                 }
             </tbody>

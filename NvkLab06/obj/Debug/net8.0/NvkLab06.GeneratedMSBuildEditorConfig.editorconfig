@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnZrRW1wbG95ZWVcTnZrQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/K23CNT2-NguyenVanKhai-NetCore/NvkLab06/Views/NvkEmployee/NvkDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnZrRW1wbG95ZWVcTnZrRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/K23CNT2-NguyenVanKhai-NetCore/NvkLab06/Views/NvkEmployee/NvkEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnZrRW1wbG95ZWVcTnZrRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/K23CNT2-NguyenVanKhai-NetCore/NvkLab06/Views/NvkEmployee/NvkIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTnZrRW1wbG95ZWVcTnZrSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
