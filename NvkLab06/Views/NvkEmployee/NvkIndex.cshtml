@@ -46,9 +46,8 @@
                                 }
                             </td>
                             <td>
-                                <a href="/NvkEmployee/NvkEdit/@nvkEmp.NvkId" class="btn btn-warning btn-sm">Sửa</a>
-                                <a href="/NvkEmployee/NvkDelete/@nvkEmp.NvkId" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn xóa?');">Xóa</a>
-                            </td>
+                                <a asp-action="NvkEdit" asp-route-id="@nvkEmp.NvkId" class="btn btn-warning btn-sm">Sửa</a>
+                                <a asp-action="NvkDelete" asp-route-id="@nvkEmp.NvkId" class="btn btn-danger btn-sm" onclick="return confirm('Bạn có chắc chắn xóa?');">Xóa</a>
                         </tr>
                     }
                 }

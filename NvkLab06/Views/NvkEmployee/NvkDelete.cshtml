@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Xóa nhân viên";
+    Layout = "~/Views/Shared/_NvkLayout.cshtml";
 }
 
 <h2>Bạn có chắc muốn xóa nhân viên này?</h2>
@@ -20,8 +21,8 @@
         <dt class="col-sm-3">Trạng thái</dt>
         <dd class="col-sm-9">@((Model.NvkStatus) ? "Hoạt động" : "Không hoạt động")</dd>
     </dl>
-    <form asp-action="NvkDelete" method="post">
-        <input type="hidden" asp-for="NvkId" />
+    <form asp-action="NvkDelete" asp-route-id="@Model.NvkId" method="post">
+        @Html.AntiForgeryToken()
         <button type="submit" class="btn btn-danger">Xóa</button>
         <a asp-action="NvkIndex" class="btn btn-secondary">Quay lại</a>
     </form>

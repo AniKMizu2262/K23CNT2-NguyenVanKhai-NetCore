@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:views\\nvkemployee\\nvkindex.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\models\\nvkemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:models\\nvkemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\views\\nvkemployee\\nvkdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:views\\nvkemployee\\nvkdelete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\views\\nvkemployee\\nvkedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:views\\nvkemployee\\nvkedit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\views\\nvkemployee\\nvkcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:views\\nvkemployee\\nvkcreate.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\controllers\\nvkemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:controllers\\nvkemployeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|f:\\k23cnt2-nguyenvankhai-netcore\\nvklab06\\models\\nvkemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFF1ADC0-BAAD-4DBD-B9E4-F6ADE3D44E96}|NvkLab06.csproj|solutionrelative:models\\nvkemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +34,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NvkEdit.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkEdit.cshtml",
+              "RelativeDocumentMoniker": "Views\\NvkEmployee\\NvkEdit.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkEdit.cshtml",
+              "RelativeToolTip": "Views\\NvkEmployee\\NvkEdit.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwC0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T03:28:08.403Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NvkCreate.cshtml",
+              "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkCreate.cshtml",
+              "RelativeDocumentMoniker": "Views\\NvkEmployee\\NvkCreate.cshtml",
+              "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkCreate.cshtml",
+              "RelativeToolTip": "Views\\NvkEmployee\\NvkCreate.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwDUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T03:28:00.497Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,46 +70,46 @@
               "RelativeDocumentMoniker": "Views\\NvkEmployee\\NvkIndex.cshtml",
               "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkIndex.cshtml",
               "RelativeToolTip": "Views\\NvkEmployee\\NvkIndex.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAQwD8AAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAowDMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-27T03:21:34.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "NvkEmployee.cs",
               "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Models\\NvkEmployee.cs",
               "RelativeDocumentMoniker": "Models\\NvkEmployee.cs",
               "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Models\\NvkEmployee.cs",
               "RelativeToolTip": "Models\\NvkEmployee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T03:21:24.803Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NvkDelete.cshtml",
               "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkDelete.cshtml",
               "RelativeDocumentMoniker": "Views\\NvkEmployee\\NvkDelete.cshtml",
               "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Views\\NvkEmployee\\NvkDelete.cshtml",
               "RelativeToolTip": "Views\\NvkEmployee\\NvkDelete.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBsAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-27T03:20:34.824Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NvkEmployeeController.cs",
               "DocumentMoniker": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Controllers\\NvkEmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\NvkEmployeeController.cs",
               "ToolTip": "F:\\K23CNT2-NguyenVanKhai-NetCore\\NvkLab06\\Controllers\\NvkEmployeeController.cs",
               "RelativeToolTip": "Controllers\\NvkEmployeeController.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAkwHQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T03:20:05.739Z",
               "EditorCaption": ""

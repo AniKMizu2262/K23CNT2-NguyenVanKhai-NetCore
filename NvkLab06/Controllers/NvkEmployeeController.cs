@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NvkLab06.Models;
+using System.Linq;
 
 namespace NvkLab06.Controllers
 {
@@ -73,6 +74,7 @@ namespace NvkLab06.Controllers
 
         // CREATE - Xử lý thêm mới nhân viên
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult NvkCreate(NvkEmployee emp)
         {
             if (ModelState.IsValid)
@@ -94,6 +96,7 @@ namespace NvkLab06.Controllers
 
         // UPDATE - Xử lý cập nhật thông tin
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult NvkEdit(NvkEmployee emp)
         {
             var oldEmp = nvkListEmployees.FirstOrDefault(e => e.NvkId == emp.NvkId);
@@ -124,6 +127,7 @@ namespace NvkLab06.Controllers
 
         // DELETE - Xử lý xóa
         [HttpPost, ActionName("NvkDelete")]
+        [ValidateAntiForgeryToken]
         public IActionResult NvkDeleteConfirmed(string id)
         {
             var emp = nvkListEmployees.FirstOrDefault(e => e.NvkId == id);
@@ -132,7 +136,5 @@ namespace NvkLab06.Controllers
             nvkListEmployees.Remove(emp);
             return RedirectToAction("NvkIndex");
         }
-
-      
     }
 }

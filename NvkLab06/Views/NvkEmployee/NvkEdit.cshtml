@@ -2,11 +2,13 @@
 
 @{
     ViewData["Title"] = "Sửa thông tin nhân viên";
+    Layout = "~/Views/Shared/_NvkLayout.cshtml";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <form asp-action="NvkEdit" method="post">
+    @Html.AntiForgeryToken()
     <input asp-for="NvkId" type="hidden" />
     <div class="form-group">
         <label>Mã NV</label>
