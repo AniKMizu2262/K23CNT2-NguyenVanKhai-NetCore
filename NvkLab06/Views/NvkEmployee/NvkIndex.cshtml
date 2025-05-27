@@ -1,0 +1,59 @@
+﻿@model List<NvkLab06.Models.NvkEmployee>
+
+@{
+    ViewBag.Title = "Danh sách nhân viên";
+    Layout = "~/Views/Shared/_NvkLayout.cshtml"; // Bỏ nếu bạn không dùng layout
+}
+
+<div class="container mt-4 d-flex justify-content-center">
+    <div style="width: 90%;">
+        <h2 class="mb-4 text-center text-primary">Danh sách nhân viên</h2>
+        <a href="/NvkEmployee/NvkCreate" class="btn btn-primary">Thêm mới </a>
+
+        <table class="table table-bordered table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Họ tên</th>
+                    <th>Ngày sinh</th>
+                    <th>Email</th>
+                    <th>Điện thoại</th>
+                    <th>Lương</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var nvkEmp in Model)
+                    {
+                        <tr>
+                            <td>@nvkEmp.NvkId</td>
+                            <td>@nvkEmp.NvkName</td>
+                            <td>@nvkEmp.NvkBirthDay.ToString("dd/MM/yyyy")</td>
+                            <td>@nvkEmp.NvkEmail</td>
+                            <td>@nvkEmp.NvkPhone</td>
+                            <td>@nvkEmp.NvkSalary.ToString("N0") VND</td>
+                            <td>
+                                @if (nvkEmp.NvkStatus)
+                                {
+                                    <span class="badge bg-success">Đang làm</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-secondary">Đã nghỉ</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="7" class="text-center text-danger">Không có dữ liệu nhân viên</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
