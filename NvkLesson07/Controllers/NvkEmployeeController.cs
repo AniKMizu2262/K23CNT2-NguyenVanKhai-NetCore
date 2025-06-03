@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NvkLesson07.Models;
+using System.Linq;
 
 namespace NvkLesson07.Controllers
 {
@@ -60,83 +61,106 @@ namespace NvkLesson07.Controllers
                 NvkStatus = false
             }
         };
+
         // GET: NvkEmployeeController
         public ActionResult NvkIndex()
         {
             return View(nvkListEmployees);
         }
 
-        // GET: NvkEmployeeController/Details/5
-        public ActionResult NvkDetails(int id)
+        // GET: NvkEmployeeController/Details/{id}
+        public ActionResult NvkDetails(string id)
         {
-            return View();
+            var employee = nvkListEmployees.FirstOrDefault(x => x.NvkId == id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
         }
 
         // GET: NvkEmployeeController/NvkCreate
         public ActionResult NvkCreate()
         {
-            var NvkEmployee = new NvkEmployee();
-            return View();
+            return View(new NvkEmployee());
         }
 
-        // POST: NvkEmployeeController/Create
+        // POST: NvkEmployeeController/NvkCreate
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult NvkCreate(NvkEmployee nvkModel )
+        public ActionResult NvkCreate(NvkEmployee nvkModel)
         {
             try
             {
-                // Thêm mới nhân viên vào list
-                nvkModel.NvkId = nvkListEmployees.Max(x => x.NvkId) +1;
+                // Tạo Id mới (simple - tăng số cuối nếu có)
+                string newId = "EMP" + (nvkListEmployees.Count + 1).ToString("D3");
+                nvkModel.NvkId = newId;
                 nvkListEmployees.Add(nvkModel);
                 return RedirectToAction(nameof(NvkIndex));
             }
             catch
             {
-                return View();
+                return View(nvkModel);
             }
         }
 
-        // GET: NvkEmployeeController/Edit/5
+        // GET: NvkEmployeeController/NvkEdit/{id}
         public ActionResult NvkEdit(string id)
         {
             var nvkEmployee = nvkListEmployees.FirstOrDefault(x => x.NvkId == id);
+            if (nvkEmployee == null) return NotFound();
             return View(nvkEmployee);
         }
 
-        // POST: NvkEmployeeController/Edit/5
+        // POST: NvkEmployeeController/NvkEdit/{id}
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult NvkEdit(int id, IFormCollection collection)
+        public ActionResult NvkEdit(string id, NvkEmployee updatedModel)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var emp = nvkListEmployees.FirstOrDefault(x => x.NvkId == id);
+                if (emp == null) return NotFound();
+
+                // Cập nhật thông tin
+                emp.NvkName = updatedModel.NvkName;
+                emp.NvkBirthDay = updatedModel.NvkBirthDay;
+                emp.NvkEmail = updatedModel.NvkEmail;
+                emp.NvkPhone = updatedModel.NvkPhone;
+                emp.NvkSalary = updatedModel.NvkSalary;
+                emp.NvkStatus = updatedModel.NvkStatus;
+
+                return RedirectToAction(nameof(NvkIndex));
             }
             catch
             {
-                return View();
+                return View(updatedModel);
             }
         }
 
-        // GET: NvkEmployeeController/Delete/5
-        public ActionResult NvkDelete(int id)
+        // GET: NvkEmployeeController/NvkDelete/{id}
+        public ActionResult NvkDelete(string id)
         {
-            return View();
+            var emp = nvkListEmployees.FirstOrDefault(x => x.NvkId == id);
+            if (emp == null) return NotFound();
+            return View(emp);
         }
 
-        // POST: NvkEmployeeController/Delete/5
-        [HttpPost]
+        // POST: NvkEmployeeController/NvkDelete/{id}
+        [HttpPost, ActionName("NvkDelete")]
         [ValidateAntiForgeryToken]
-        public ActionResult NvkDelete(int id, IFormCollection collection)
+        public ActionResult NvkDeleteConfirmed(string id)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                var emp = nvkListEmployees.FirstOrDefault(x => x.NvkId == id);
+                if (emp == null) return NotFound();
+                nvkListEmployees.Remove(emp);
+                return RedirectToAction(nameof(NvkIndex));
             }
             catch
             {
-                return View();
+                return RedirectToAction(nameof(NvkIndex));
             }
         }
     }

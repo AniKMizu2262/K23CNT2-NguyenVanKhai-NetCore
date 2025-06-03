@@ -54,9 +54,10 @@
             @Html.DisplayFor(model => model.NvkStatus)
         </dd>
     </dl>
-    
-    <form asp-action="NvkDelete">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+
+    <form asp-action="NvkDelete" method="post">
+        <input type="hidden" asp-for="NvkId" />
+        <input type="submit" value="Xóa" class="btn btn-danger" /> |
+        <a asp-action="NvkIndex">Quay lại</a>
     </form>
-</div>
+    </div>
