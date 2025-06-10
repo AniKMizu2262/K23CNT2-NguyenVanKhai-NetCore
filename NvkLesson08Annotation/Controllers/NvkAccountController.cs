@@ -51,8 +51,8 @@ namespace NvkLesson08Annotation.Controllers
         };
 
 
-        // GET: NvkAccountController
-        public ActionResult NvkIndex()
+        // GET: NvkAccount/NvkIndex
+        public IActionResult NvkIndex()
         {
             return View(nvkListAccount);
         }
@@ -63,44 +63,29 @@ namespace NvkLesson08Annotation.Controllers
             return View();
         }
 
-        // GET: NvkAccountController/Create
-        public ActionResult NvkCreate()
+        // GET: NvkAccount/NvkCreate
+        public IActionResult NvkCreate()
         {
-            var nvkModel = new NvkAccount();
-            return View(nvkModel);
+            return View();
         }
 
-        // POST: NvkAccountController/Create
+        // POST: NvkAccount/NvkCreate
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(NvkAccount nvkModel)
+        public IActionResult NvkCreate(NvkAccount model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    // Gán ID tự động (nếu cần)
-                    nvkModel.NvkId = nvkListAccount.Count > 0
-                        ? nvkListAccount.Max(x => x.NvkId) + 1
-                        : 1;
-
-                    // Thêm vào danh sách tạm
-                    nvkListAccount.Add(nvkModel);
-
-                    // Chuyển về danh sách
-                    return RedirectToAction(nameof(NvkIndex));
-                }
-
-                // Nếu dữ liệu không hợp lệ, hiển thị lại form
-                return View(nvkModel);
+                // Tạo ID tự tăng (nếu cần)
+                model.NvkId = nvkListAccount.Count > 0
+                    ? nvkListAccount.Max(x => x.NvkId) + 1
+                    : 1;
+                nvkListAccount.Add(model);
+                return RedirectToAction("NvkIndex");
             }
-            catch (Exception ex)
-            {
-                // Ghi log lỗi nếu cần
-                ModelState.AddModelError("", "Có lỗi xảy ra khi thêm mới: " + ex.Message);
-                return View(nvkModel);
-            }
+            return View(model);
         }
+
 
 
         // GET: NvkAccountController/Edit/5
