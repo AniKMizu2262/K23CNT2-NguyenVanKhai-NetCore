@@ -9,85 +9,85 @@ using NvkLesson09EF.Models;
 
 namespace NvkLesson09EF.Controllers
 {
-    public class NvkCategoriesController : Controller
+    public class NvkPublishersController : Controller
     {
         private readonly NvkBookStoreContext _context;
 
-        public NvkCategoriesController(NvkBookStoreContext context)
+        public NvkPublishersController(NvkBookStoreContext context)
         {
             _context = context;
         }
 
-        // GET: NvkCategories
-        public async Task<IActionResult> NvkIndex()
+        // GET: NvkPublishers
+        public async Task<IActionResult> Index()
         {
-            return View(await _context.Categories.ToListAsync());
+            return View(await _context.Publishers.ToListAsync());
         }
 
-        // GET: NvkCategories/Details/5
-        public async Task<IActionResult> Details(int? nvkId)
+        // GET: NvkPublishers/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            if (nvkId == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == nvkId);
-            if (category == null)
+            var publisher = await _context.Publishers
+                .FirstOrDefaultAsync(m => m.PublisherId == id);
+            if (publisher == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(publisher);
         }
 
-        // GET: NvkCategories/Create
+        // GET: NvkPublishers/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: NvkCategories/Create
+        // POST: NvkPublishers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,CategoryName")] Category category)
+        public async Task<IActionResult> Create([Bind("PublisherId,PublisherName,Phone,Address")] Publisher publisher)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(category);
+                _context.Add(publisher);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(NvkIndex));
+                return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(publisher);
         }
 
-        // GET: NvkCategories/Edit/5
-        public async Task<IActionResult> Edit(int? nvkId)
+        // GET: NvkPublishers/Edit/5
+        public async Task<IActionResult> Edit(int? id)
         {
-            if (nvkId == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var category = await _context.Categories.FindAsync(nvkId);
-            if (category == null)
+            var publisher = await _context.Publishers.FindAsync(id);
+            if (publisher == null)
             {
                 return NotFound();
             }
-            return View(category);
+            return View(publisher);
         }
 
-        // POST: NvkCategories/Edit/5
+        // POST: NvkPublishers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int nvkId, [Bind("CategoryId,CategoryName")] Category category)
+        public async Task<IActionResult> Edit(int id, [Bind("PublisherId,PublisherName,Phone,Address")] Publisher publisher)
         {
-            if (nvkId != category.CategoryId)
+            if (id != publisher.PublisherId)
             {
                 return NotFound();
             }
@@ -96,12 +96,12 @@ namespace NvkLesson09EF.Controllers
             {
                 try
                 {
-                    _context.Update(category);
+                    _context.Update(publisher);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CategoryExists(category.CategoryId))
+                    if (!PublisherExists(publisher.PublisherId))
                     {
                         return NotFound();
                     }
@@ -110,12 +110,12 @@ namespace NvkLesson09EF.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(NvkIndex));
+                return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View(publisher);
         }
 
-        // GET: NvkCategories/Delete/5
+        // GET: NvkPublishers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,34 +123,34 @@ namespace NvkLesson09EF.Controllers
                 return NotFound();
             }
 
-            var category = await _context.Categories
-                .FirstOrDefaultAsync(m => m.CategoryId == id);
-            if (category == null)
+            var publisher = await _context.Publishers
+                .FirstOrDefaultAsync(m => m.PublisherId == id);
+            if (publisher == null)
             {
                 return NotFound();
             }
 
-            return View(category);
+            return View(publisher);
         }
 
-        // POST: NvkCategories/Delete/5
+        // POST: NvkPublishers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var category = await _context.Categories.FindAsync(id);
-            if (category != null)
+            var publisher = await _context.Publishers.FindAsync(id);
+            if (publisher != null)
             {
-                _context.Categories.Remove(category);
+                _context.Publishers.Remove(publisher);
             }
 
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(NvkIndex));
+            return RedirectToAction(nameof(Index));
         }
 
-        private bool CategoryExists(int id)
+        private bool PublisherExists(int id)
         {
-            return _context.Categories.Any(e => e.CategoryId == id);
+            return _context.Publishers.Any(e => e.PublisherId == id);
         }
     }
 }
