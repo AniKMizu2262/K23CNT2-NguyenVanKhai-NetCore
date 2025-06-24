@@ -1,0 +1,43 @@
+﻿@model Nvk_Leson10.Models.Category
+
+@{
+    ViewData["Title"] = "Chỉnh sửa danh mục loại";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Chỉnh sửa thông tin loại</h4>
+            </div>
+            <form asp-action="NvkEdit" asp-route-nvkID="@Model.CateId" method="post">
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-2"></div>
+                    <input type="hidden" asp-for="CateId" />
+                    <div class="form-group mb-3">
+                        <label asp-for="CateName" class="control-label"></label>
+                        <input asp-for="CateName" class="form-control" />
+                        <span asp-validation-for="CateName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="CateStatus" class="control-label"></label>
+                        <input asp-for="CateStatus" class="form-control" />
+                        <span asp-validation-for="CateStatus" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <input type="submit" value="Lưu thay đổi" class="btn btn-primary" />
+                    <a asp-action="NvkIndex" class="btn btn-link">Quay lại danh sách</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
