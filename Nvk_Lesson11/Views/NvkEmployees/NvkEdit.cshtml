@@ -1,0 +1,49 @@
+﻿@model Nvk_Lesson11.Models.NvkEmployee
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>NvkEmployee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="NvkEdit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NvkEmpId" />
+            <div class="form-group">
+                <label asp-for="NvkEmpName" class="control-label"></label>
+                <input asp-for="NvkEmpName" class="form-control" />
+                <span asp-validation-for="NvkEmpName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvkEmpLevel" class="control-label"></label>
+                <input asp-for="NvkEmpLevel" class="form-control" />
+                <span asp-validation-for="NvkEmpLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvkEmpStartDate" class="control-label"></label>
+                <input asp-for="NvkEmpStartDate" class="form-control" />
+                <span asp-validation-for="NvkEmpStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NvkEmpStatus" class="control-label"></label>
+                <input asp-for="NvkEmpStatus" class="form-control" />
+                <span asp-validation-for="NvkEmpStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="NvkIndex">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
