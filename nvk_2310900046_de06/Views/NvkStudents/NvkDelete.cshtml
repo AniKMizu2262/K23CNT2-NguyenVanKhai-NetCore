@@ -1,0 +1,50 @@
+﻿@model nvk_2310900046_de06.Models.NvkStudent
+
+@{
+    ViewData["Title"] = "Xoá sinh viên";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border-danger shadow-sm">
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">⚠️ Xác nhận xoá sinh viên</h4>
+                </div>
+                <div class="card-body">
+
+                    <h5 class="text-danger mb-4">Bạn có chắc muốn xoá sinh viên này không?</h5>
+
+                    <dl class="row">
+                        <dt class="col-sm-4">Họ tên</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NvkStudName)</dd>
+
+                        <dt class="col-sm-4">Tuổi</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NvkStudAge)</dd>
+
+                        <dt class="col-sm-4">Giới tính</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NvkStudGender)</dd>
+
+                        <dt class="col-sm-4">Email</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.NvkEmail)</dd>
+
+                        <dt class="col-sm-4">Tình trạng</dt>
+                        <dd class="col-sm-8">
+                            @(Model.NvkStudStatus == true ? "Hoạt động" : "Tạm khóa")
+                        </dd>
+
+                    </dl>
+
+                    <form asp-action="NvkDelete" asp-controller="NvkStudents" method="post" class="mt-4">
+                        <input type="hidden" asp-for="NvkStudId" />
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-danger">🗑️ Xoá</button>
+                            <a asp-action="NvkIndex" class="btn btn-secondary">⬅ Quay lại</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

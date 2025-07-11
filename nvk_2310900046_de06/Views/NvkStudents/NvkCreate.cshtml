@@ -1,0 +1,73 @@
+﻿@model nvk_2310900046_de06.Models.NvkStudent
+
+@{
+    ViewData["Title"] = "NvkCreate";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">➕ Thêm sinh viên mới</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="NvkCreate">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkStudId" class="form-label"></label>
+                            <input asp-for="NvkStudId" class="form-control" />
+                            <span asp-validation-for="NvkStudId" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkStudName" class="form-label"></label>
+                            <input asp-for="NvkStudName" class="form-control" />
+                            <span asp-validation-for="NvkStudName" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkStudAge" class="form-label"></label>
+                            <input asp-for="NvkStudAge" class="form-control" />
+                            <span asp-validation-for="NvkStudAge" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkStudGender" class="form-label"></label>
+                            <input asp-for="NvkStudGender" class="form-control" />
+                            <span asp-validation-for="NvkStudGender" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkEmail" class="form-label"></label>
+                            <input asp-for="NvkEmail" class="form-control" />
+                            <span asp-validation-for="NvkEmail" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="NvkStudStatus" class="form-label"></label>
+                            <select asp-for="NvkStudStatus" class="form-select">
+                                <option value="">-- Chọn trạng thái --</option>
+                                <option value="true">Hoạt động</option>
+                                <option value="false">Tạm khóa</option>
+                            </select>
+                            <span asp-validation-for="NvkStudStatus" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success">💾 Lưu</button>
+                            <a asp-action="NvkIndex" class="btn btn-secondary">⬅ Quay lại</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

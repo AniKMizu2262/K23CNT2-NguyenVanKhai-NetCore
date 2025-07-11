@@ -1,0 +1,43 @@
+﻿@model IEnumerable<nvk_2310900046_de06.Models.NvkStudent>
+
+@{
+    ViewData["Title"] = "Danh sách sinh viên";
+}
+
+<h1 class="mb-4">Danh sách sinh viên</h1>
+
+<p>
+    <a asp-action="NvkCreate" class="btn btn-success">Thêm mới</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Họ và tên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Email</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.NvkStudName)</td>
+                <td>@Html.DisplayFor(modelItem => item.NvkStudAge)</td>
+                <td>@Html.DisplayFor(modelItem => item.NvkStudGender)</td>
+                <td>@Html.DisplayFor(modelItem => item.NvkEmail)</td>
+                <td>
+                    @(item.NvkStudStatus.HasValue && item.NvkStudStatus.Value ? "Hoạt động" : "Tạm khóa")
+                </td>
+                <td>
+                    <a asp-action="NvkEdit" asp-route-nvkID="@item.NvkStudId" class="btn btn-sm btn-warning">Sửa</a>
+                    <a asp-action="NvkDetails" asp-route-nvkID="@item.NvkStudId" class="btn btn-sm btn-info">Chi tiết</a>
+                    <a asp-action="NvkDelete" asp-route-nvkID="@item.NvkStudId" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
